@@ -20,11 +20,14 @@ a{
     margin: 50px 0;border: black;
 }
 #products{
-    margin-left: 110px;
     margin-top: 90px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .card{
-    width: 30%;
+    width: 250px !important;
     margin: 15px;
     box-sizing: border-box;
     float: left;
@@ -35,6 +38,9 @@ a{
     border: black;
     transition: .4s;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 .img{
@@ -69,9 +75,24 @@ button{
 }
 .buy{
     background: rgb(8, 8, 8);
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
     
 }
 .card:hover{
     box-shadow: grey;
     transform: translate(0px,-8px);
+}
+
+.row {
+    height: 420px;
+}
+
+#home {
+    background-image: url('../img/Pin\ by\ Monica\ Bravo\ on\ In\ Him\ I\ find\ rest\ in\ 2022\ _\ Brown\ aesthetic\,\ Book\ photography\,\ Book\ aesthetic.jfif');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 700px;
 }

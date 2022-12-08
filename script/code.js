@@ -1,4 +1,4 @@
-fetch("../json/json.js")
+// fetch("../json/json.js")
 // .then ((store) => {
 //     return store.json()
 // })
@@ -57,25 +57,75 @@ localStorage.setItem('books', JSON.stringify([
         "type": "book",
         "image": "https://i.postimg.cc/1zqMLFym/img2.jpg",
         "amount": 0
+    },
+    {   "id": 4,
+        "name": "You've reached Sam",
+        "genre": "Romance books",
+        "price": 250,
+        "type": "book",
+        "image": "https://i.postimg.cc/1zqMLFym/img2.jpg",
+        "amount": 0
+    },
+    {   "id": 4,
+        "name": "You've reached Sam",
+        "genre": "Romance books",
+        "price": 250,
+        "type": "book",
+        "image": "https://i.postimg.cc/1zqMLFym/img2.jpg",
+        "amount": 0
+    },
+    {   "id": 4,
+        "name": "You've reached Sam",
+        "genre": "Romance books",
+        "price": 250,
+        "type": "book",
+        "image": "https://i.postimg.cc/1zqMLFym/img2.jpg",
+        "amount": 0
+    },
+    {   "id": 4,
+        "name": "You've reached Sam",
+        "genre": "Romance books",
+        "price": 250,
+        "type": "book",
+        "image": "https://i.postimg.cc/1zqMLFym/img2.jpg",
+        "amount": 0
     }
 ]));
 
-let x = JSON.parse(localStorage.getItem('books'));
-
-console.log(x)
+let allBooks = JSON.parse(localStorage.getItem('books'));
 
 function displaydata(){
     let books = document.querySelector("#products");
-   x.forEach((item)=> {
-    books.innerHTML+=`<div class="row row-cols-5">
-    <div class="card 1">
-      <img class="img" src="./img/img3.jfif">
-      <h3>Romance books</h3>
-      <p>Do it for yourself</p>
-      <h6>R320,00</h6>
-      <button class="buy">Buy now</button>
-    </div>
-    `;
-   }) ;
+    Object.keys(allBooks).forEach( (book) => {
+        let books = document.querySelector("#products");
+        console.log(allBooks[book]);
+        books.innerHTML+=`<div class="row row-cols-5">
+        <div class="card 1">
+          <img class="img" src="${allBooks[book].image}">
+          <h3>${allBooks[book].name}</h3>
+          <p>${allBooks[book].genre}</p>
+          <h6>R320,00</h6>
+          <button class="buy">Buy now</button>
+        </div>
+        `;
+    });
 }
 displaydata();
+
+let table= JSON.parse(localStorage.table)
+
+table.forEach(item=> {
+    try{
+        tbody.innerHTML +=`
+        <tr>
+        <th> scope="row"</th>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        <td>${item.genre}</td>
+        <td> <button class="btn btn-secondary btn-lg"
+        <button id="del btn" class="btn btn-secondary btn-lg"
+        </tr>`
+    } catch (error) {
+        console.log(error)
+    }
+} );
