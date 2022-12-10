@@ -10,7 +10,7 @@ console.log(books)
         <td>${item.name}</td>
         <td>${item.genre}</td>
         <td>${item.price}</td>
-        <td> <button id="ed">Edit</button>
+        <td> <button id="ed" onclick="edItem(${item.id}">Edit</button>
         <button id="del" onclick="delItem(${item.id})">del</button>
         </td>
         </tr>`;
@@ -25,3 +25,11 @@ console.log(books)
             books.splice(id-1, 1)
             localStorage.setItem('books', JSON.stringify(books))
             location.reload();        }
+
+         //edit
+
+         function edItem(id){
+            books.splice(id-1,1),
+            localStorage.setItem('books',JSON.stringify(books))
+            location.reload();
+         }
