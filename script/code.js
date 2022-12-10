@@ -132,6 +132,8 @@ displaydata();
 
 //checkout
 
+localStorage.setItem('myCheckout', JSON.stringify([]));
+
 let check = JSON.parse(localStorage.getItem ('myCheckout'));
 // let k = document.querySelector('#zoesButton')
 // k.addEventListener("click", myFunction);

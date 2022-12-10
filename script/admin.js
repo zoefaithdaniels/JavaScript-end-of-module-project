@@ -22,11 +22,6 @@ console.log(books)
 
         //del
         function delItem(id){
-            books.splice(id-1,1);
-            let i =1
-            books.forEach (book => {
-        console.log(book)
-        localStorage.removeItem('book');
-            })
-            displaydata()
-        }
+            books.splice(id-1, 1)
+            localStorage.setItem('books', JSON.stringify(books))
+            location.reload();        }
