@@ -1,29 +1,3 @@
-// fetch("../json/json.js")
-// .then ((store) => {
-//     return store.json()
-// })
-// .then((data) => {
-//     let catelogue = document.querySelector('#catelogue');
-//     Object.keys(data).forEach((item) => {
-//         console.log(data[item].name);
-//         if(data[item] && data[item].type == "book") {
-//             catelogue.innerHTML +=
-//             `
-//             <div class="col-md-4">
-//                     <div class="card" style="width: 18rem;">
-//                         <img src=${data[item].image} class="card-img-top" alt="...">
-//                             <div class="card-body">
-//                                 <p class="bookName">${data[item].name}</p>
-//                                 <p class="bookPrice">${data[item].price}</p>
-//                                 <button class="addToCart" href="#">Purchase</button>
-//                             </div>
-//                     </div>
-//             </div>
-//             `
-//         }
-//     })
-// });
-
 localStorage.setItem('books', JSON.stringify([
     {   
         id: 1,
@@ -135,8 +109,6 @@ displaydata();
 localStorage.setItem('myCheckout', JSON.stringify([]));
 
 let check = JSON.parse(localStorage.getItem ('myCheckout'));
-// let k = document.querySelector('#zoesButton')
-// k.addEventListener("click", myFunction);
 
 function addToCart(id) {
     console.log(id)
