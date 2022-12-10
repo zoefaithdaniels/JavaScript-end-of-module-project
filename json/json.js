@@ -1,5 +1,5 @@
 
-    // localStorage.setItem('books', JSON.stringify([
+    localStorage.setItem('books', JSON.stringify([
         {   
         "id": 1,
         "name": "Do it for yourself",
@@ -33,4 +33,4 @@
         "image": "https://i.postimg.cc/1zqMLFym/img2.jpg",
         "amount": 0
     }
-// ]));
+ ]));

@@ -10,8 +10,8 @@ console.log(books)
         <td>${item.name}</td>
         <td>${item.genre}</td>
         <td>${item.price}</td>
-        <td> <button>Edit</button>
-        <button>del</button>
+        <td> <button id="ed">Edit</button>
+        <button id="del" onclick="delItem(${item.id})">del</button>
         </td>
         </tr>`;
         } catch (error) {
@@ -19,3 +19,14 @@ console.log(books)
         }
         
         });
+
+        //del
+        function delItem(id){
+            books.splice(id-1,1);
+            let i =1
+            books.forEach (book => {
+        console.log(book)
+        localStorage.removeItem('book');
+            })
+            displaydata()
+        }

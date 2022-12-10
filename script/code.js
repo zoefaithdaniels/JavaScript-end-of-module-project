@@ -123,45 +123,26 @@ function displaydata(){
                 <h3>${book.name}</h3>
                 <h6>R${book.price}</h6>
                 <p>${book.genre}</p>
-                <button type="button" id="zoesButton" class="btn btn-primary bg-dark ">Add to Checkout</button>
+                <button type="button" id="zoesButton" class="btn btn-primary bg-dark " onclick="addToCart(${book.id})">Add to Checkout</button>
             </div>
         `
     });
 }
 displaydata();
 
-let check = [];
-localStorage.setItem('myCheckout', JSON.stringify(check))
-let k = document.querySelector('#zoesButton')
-k.addEventListener("click", myFunction);
+//checkout
 
-function myFunction() {
-  let b = JSON.parse(localStorage.getItem('myCheckout'));
-  b.push{
-    
-  }
+let check = JSON.parse(localStorage.getItem ('myCheckout'));
+// let k = document.querySelector('#zoesButton')
+// k.addEventListener("click", myFunction);
+
+function addToCart(id) {
+    console.log(id)
+    check.push(allBooks[id-1])
+    console.log(check)
+    localStorage.setItem('myCheckout', JSON.stringify(check))
+
 }
 
-
-// let tbody = document.getElementById('table');
-// let books = JSON.parse(localStorage.getItem('books'));
-
-//     books.forEach((item)=> {
-//         try {
-//             tbody.innerHTML += `<tr>
-//         <th scope="row"> <img src="${item.image}" style="width:40px;" </th>
-//         <td>${item.id}</td>
-//         <td>${item.name}</td>
-//         <td>${item.genre}</td>
-//         <td>${item.price}</td>
-//         <td>${item.type}</td>
-//         <td> <button class="btn btn-secondary btn-lg"
-//         <button id="del btn" class="btn btn-secondary btn-lg"
-//         </tr>`;
-//         } catch (error) {
-//             console.log(error);
-//         }
-        
-//         })
 
 
