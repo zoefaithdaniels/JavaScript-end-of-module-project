@@ -15,6 +15,35 @@ x.forEach(element => {
 
 });
 
+//filter
+//  const genre = [romance];
+//  const result =
+//  genre.filter(romance);
+
+//  function romance(genre) {
+//      return genre >= romance;
+//  };
+
+// const genre = [romance,fiction,action];
+
+
+// function checkBooks(genre){
+//     return genre > 
+//     document.getElementById("genreToCheck").value;
+// }
+
+// function myFunction() {
+//     document.getElementById("books")
+//     .innerHTML =
+//     genre.filter(checkBooks);
+// }
+
+
+
+
+
+
+
 // let check = [];
 // localStorage.setItem('myCheckout', JSON.stringify(check))
 // let checkout = JSON.parse(localStorage.getItem('myCheckout'));
